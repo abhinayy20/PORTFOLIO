@@ -1,0 +1,26 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building the application...'
+            }
+        }
+        stage('Manual Approval Gate') {
+            when {
+                branch 'main'
+            }
+            steps {
+                script {
+                    input message: "Approval required for branch: ${env.BRANCH_NAME}", ok: "Proceed"
+                }
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying the application...'
+            }
+        }
+    }
+}
