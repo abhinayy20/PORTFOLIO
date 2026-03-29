@@ -331,7 +331,9 @@ a { text-decoration: none; color: inherit; }
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 15%;
   border-radius: 50%;
+  transform: scale(1.2);
 }
 .profile-fallback {
   font-size: 4rem;
