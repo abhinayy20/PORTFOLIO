@@ -889,6 +889,161 @@ input:focus, textarea:focus {
   font-family: 'JetBrains Mono', monospace;
 }
 
+/* Certificates */
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.certificate-card {
+  padding: 1.5rem !important;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+.certificate-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow:
+    0 12px 40px rgba(255,153,0,0.12),
+    0 12px 40px rgba(0,120,212,0.08);
+}
+
+.cert-image-wrapper {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid;
+  background: rgba(0,0,0,0.4);
+  aspect-ratio: 16 / 11;
+}
+
+.cert-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.certificate-card:hover .cert-image {
+  transform: scale(1.05);
+}
+
+.cert-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(11, 14, 20, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  backdrop-filter: blur(4px);
+}
+.certificate-card:hover .cert-overlay {
+  opacity: 1;
+}
+
+.cert-zoom-icon {
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--aws-orange);
+  padding: 0.6rem 1.4rem;
+  border: 2px solid var(--aws-orange);
+  border-radius: 30px;
+  background: rgba(255, 153, 0, 0.1);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+.cert-zoom-icon:hover {
+  background: var(--aws-orange);
+  color: #000;
+}
+
+.cert-info {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: 1.2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--glass-border);
+}
+
+.cert-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  animation: dot-pulse 2s infinite;
+}
+
+.cert-info h3 {
+  font-size: 1rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Lightbox */
+.cert-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.88);
+  backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  cursor: pointer;
+}
+
+.cert-lightbox-content {
+  position: relative;
+  max-width: 900px;
+  max-height: 85vh;
+  width: 100%;
+  cursor: default;
+}
+
+.cert-lightbox-img {
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 16px;
+  border: 2px solid rgba(255, 153, 0, 0.3);
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.5),
+    0 0 40px rgba(255, 153, 0, 0.1);
+}
+
+.cert-lightbox-close {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--aws-orange);
+  background: var(--bg-dark);
+  color: var(--aws-orange);
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  z-index: 10000;
+}
+.cert-lightbox-close:hover {
+  background: var(--aws-orange);
+  color: #000;
+  transform: rotate(90deg);
+}
+
 /* Footer */
 footer {
   text-align: center;
@@ -906,6 +1061,7 @@ footer .cloud-colors span:nth-child(3) { color: var(--gcp-green); }
 /* Responsive */
 @media (max-width: 1024px) {
   .skills-icon-grid { grid-template-columns: repeat(3, 1fr); }
+  .certificates-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 768px) {
@@ -949,8 +1105,11 @@ footer .cloud-colors span:nth-child(3) { color: var(--gcp-green); }
   .skills-icon-grid { grid-template-columns: repeat(3, 1fr); gap: 0.8rem; }
   .skill-icon-card { padding: 1rem 0.5rem; }
   .skill-icon-emoji { font-size: 1.8rem; }
+  .certificates-grid { grid-template-columns: 1fr; }
+  .cert-lightbox { padding: 1rem; }
 }
 
 @media (max-width: 480px) {
   .skills-icon-grid { grid-template-columns: repeat(2, 1fr); }
+  .certificates-grid { grid-template-columns: 1fr; }
 }

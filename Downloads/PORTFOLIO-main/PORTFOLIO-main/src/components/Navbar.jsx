@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
-const links = ['Home','About','Skills','Projects','Education','Contact'];
+const links = ['Home','About','Skills','Projects','Education','Certificates','Contact'];
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
