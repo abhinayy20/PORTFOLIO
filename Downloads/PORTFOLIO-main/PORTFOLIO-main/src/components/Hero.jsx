@@ -19,8 +19,8 @@ export default function Hero() {
 
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = '/Abhinay_CV.pdf';
-    link.download = 'Abhinay_Kumar_Yadav_CV.pdf';
+    link.href = '/Abhinay_CV.jpg';
+    link.download = 'Abhinay_Kumar_Yadav_CV.jpg';
     link.click();
   };
 
