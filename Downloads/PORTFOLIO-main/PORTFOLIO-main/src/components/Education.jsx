@@ -16,6 +16,13 @@ const education = [
     percentage: '68%',
     color: '#00d4ff',
   },
+  {
+    icon: '🏫',
+    level: 'Bachelor\'s Degree (B.Tech)',
+    school: 'Lovely Professional University',
+    percentage: '2023',
+    color: '#a855f7',
+  },
 ];
 
 export default function Education() {

@@ -3,8 +3,8 @@ import { motion, useInView, AnimatePresence } from 'framer-motion';
 
 const certificates = [
   {
-    title: 'Certificate 1',
-    image: '/cert1.jpg',
+    title: 'Advanced Excel',
+    image: '/advanced-excel.jpg1',
     color: '#FF9900',
   },
   {
@@ -13,7 +13,7 @@ const certificates = [
     color: '#0078D4',
   },
   {
-    title: 'Cloud Computing',
+    title: 'Soft Skills',
     image: 'https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~YZURLPWGV4GX/CERTIFICATE_LANDING_PAGE~YZURLPWGV4GX.jpeg',
     color: '#34A853',
   },
