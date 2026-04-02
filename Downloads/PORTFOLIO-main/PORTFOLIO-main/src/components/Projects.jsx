@@ -12,20 +12,20 @@ const techColor = {
 
 const projects = [
   {
-    icon: '🐳',
+    icon: '✈️',
     iconTheme: 'aws-theme',
-    title: 'hello-world-eb-docker',
-    desc: 'CI/CD Pipeline for Deploying Containerized node.js Application on the Cloud using Elastic Beanstalk and Docker.',
-    tech: ['Docker', 'AWS', 'Node.js', 'CI/CD'],
-    link: 'https://github.com/abhinayy20/hello-world-eb-docker',
+    title: 'Smart Tour and Travel Management System',
+    desc: 'A comprehensive travel management platform that helps users plan, book, and manage their travel itineraries. Features include destination booking, package management, and real-time travel updates for seamless travel experiences.',
+    tech: ['React', 'Node.js', 'MongoDB', 'Booking'],
+    link: 'https://github.com/abhinayy20/Smart-Tour-and-Travel-Manangement-System',
   },
   {
-    icon: '🏗️',
+    icon: '📚',
     iconTheme: 'gcp-theme',
-    title: 'multi-pipeline',
-    desc: 'Multi-stage deployment pipeline orchestration using advanced HCL and Terraform configurations for infrastructure deployment.',
-    tech: ['HCL', 'Terraform', 'Pipelines', 'IaC'],
-    link: 'https://github.com/abhinayy20/multi-pipeline',
+    title: 'Learning App',
+    desc: 'An interactive educational platform designed to enhance learning experiences. Provides structured courses, interactive quizzes, progress tracking, and personalized learning recommendations for students of all levels.',
+    tech: ['React', 'JavaScript', 'Firebase', 'Education'],
+    link: 'https://github.com/abhinayy20/Learning_app_mine',
   },
   {
     icon: '🐧',
